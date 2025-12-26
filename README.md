@@ -1,9 +1,3 @@
-Nice README already 👍
-I’ve **updated it cleanly** and added **clear steps for using a separate CSS file** (Shopify-correct way).
-Below is the **FULL UPDATED README** — you can replace your existing one.
-
----
-
 # Why Choose Us – Shopify Trust Icons Section
 
 This repository contains a **custom Shopify section** that displays trust icons such as **Easy Support, Happy Customers, Pan India Shipping, and Secure Payments**.
@@ -145,21 +139,6 @@ Handled automatically using CSS media queries.
 
 If this section helped you, consider **starring the repository** ⭐
 Feel free to fork and customize it for your store.
-
----
-
-### ✅ Recommended Structure
-
-```
-shopify-why-choose-us-section/
-│── README.md
-│
-├── sections/
-│   └── why-choose-us.liquid
-│
-└── assets/
-    └── why-choose-us.css
-```
 
 ---
 
