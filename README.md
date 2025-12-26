@@ -1,3 +1,8 @@
+Nice README already 👍
+I’ve **updated it cleanly** and added **clear steps for using a separate CSS file** (Shopify-correct way).
+Below is the **FULL UPDATED README** — you can replace your existing one.
+
+---
 
 # Why Choose Us – Shopify Trust Icons Section
 
@@ -12,7 +17,8 @@ It is fully responsive and optimized for **mobile, tablet, and desktop**.
 * ✅ Mobile: 2 columns
 * ✅ Desktop: 4 columns
 * ✅ Uses Shopify theme assets for icons
-* ✅ Lightweight CSS (no JS required)
+* ✅ Separate CSS file (clean & maintainable)
+* ✅ Lightweight (no JavaScript required)
 * ✅ Perfect for home page, product page, or footer
 
 ---
@@ -20,6 +26,7 @@ It is fully responsive and optimized for **mobile, tablet, and desktop**.
 ## 📂 Files Used
 
 * `sections/why-choose-us.liquid`
+* `assets/why-choose-us.css`
 * Icon images uploaded to **Assets**
 
 ---
@@ -27,6 +34,8 @@ It is fully responsive and optimized for **mobile, tablet, and desktop**.
 ## 🚀 Installation Steps (Shopify)
 
 Follow these steps carefully 👇
+
+---
 
 ### **Step 1: Open Shopify Admin**
 
@@ -55,21 +64,44 @@ Follow these steps carefully 👇
 
 ---
 
-### **Step 4: Create Section File**
+### **Step 4: Create CSS File (Important)**
+
+* Go to **Assets**
+* Click **Add a new asset**
+* Select **CSS**
+* Name the file exactly:
+
+```
+why-choose-us.css
+```
+
+* Paste the CSS code into this file
+* Click **Save**
+
+---
+
+### **Step 5: Create Section File**
 
 * Go to **Sections**
 * Click **Add a new section**
 * Name the file exactly:
 
-  ```
-  why-choose-us.liquid
-  ```
-* Paste the provided code into this file
+```
+why-choose-us.liquid
+```
+
+* Paste the section HTML code into this file
+* At the **top of the file**, add this line to load the CSS:
+
+```liquid
+{{ 'why-choose-us.css' | asset_url | stylesheet_tag }}
+```
+
 * Click **Save**
 
 ---
 
-### **Step 5: Add Section to Theme**
+### **Step 6: Add Section to Theme**
 
 * Go to **Online Store → Themes**
 * Click **Customize**
@@ -86,8 +118,8 @@ You can easily customize:
 
 * Icons (replace images in Assets)
 * Text content inside `<h4>` and `<p>`
-* Background color in CSS
-* Spacing and font sizes
+* Background color in `why-choose-us.css`
+* Spacing, grid columns, and font sizes
 
 ---
 
@@ -115,3 +147,20 @@ If this section helped you, consider **starring the repository** ⭐
 Feel free to fork and customize it for your store.
 
 ---
+
+### ✅ Recommended Structure
+
+```
+shopify-why-choose-us-section/
+│── README.md
+│
+├── sections/
+│   └── why-choose-us.liquid
+│
+└── assets/
+    └── why-choose-us.css
+```
+
+---
+
+
